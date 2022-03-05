@@ -1,0 +1,49 @@
+
+
+/* ①四角の背景色をオレンジにする*/
+.button {
+    background-color: orange;
+    display: inline-block;
+    font-size: 2em;
+
+    padding:  0px 10px;
+}
+
+/* ①四角の2辺のborderをブルー、レッドにし、45度回転させる*/
+.button::after {
+    content: "";
+    display: inline-block;
+    /* background-color: orange; */
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid rgb(0, 17, 255);
+    border-right: 2px solid rgb(255, 0, 0);
+    transform: rotate(45deg);
+
+}
+
+/* ②四角の四辺に 太いborderをつける*/
+/* posiiton を relative にして、他の図形が重なるようにする*/
+.triangle{
+    position:relative;
+    background-color: orange;
+    width: 10px;
+    height: 10px;
+    border-top: rgb(236, 236, 255) 50px solid;
+    border-right: green 50px solid;
+    border-bottom: rgb(250, 250, 183) 50px solid;
+    border-left: rgb(255, 199, 199) 50px solid;
+    margin-left: 200px;
+}
+/* ②四角の背景色をマルにする*/
+/* ②要素を重ねる。(absolute) */
+.circle {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background-color: aqua;
+    border-radius: 50%;
+    position: absolute;
+    top:130px;
+   left:220px;
+}
